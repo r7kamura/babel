@@ -2,7 +2,7 @@ class EntriesController < ApplicationController
   before_filter :prepare_entry, :only => :show
 
   def index
-    @entries = Entry.order("created_at DESC")
+    @entries = Entry.order("created_at DESC").includes(:codes)
   end
 
   def show

@@ -4,9 +4,27 @@ html
     title
       | Babel
 
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Press+Start+2P"
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
 
-  body
-    = yield
+  body*{:id => unique_class_name}
+    header#header
+      h1
+        = link_to root_path do
+          | Babel
+
+      .add
+        = link_to new_entry_path do
+          i.icon-plus
+
+    #main
+      = yield
+
+    footer#footer
+      = link_to "http//twitter.com/r7kamura" do
+        p.yunotti
+          | ✘╹◡╹✘
+        p.name
+          | @r7kamura

@@ -1,5 +1,23 @@
-ul.entries
-  - @entries.each do |entry|
-    li.entry
-      .title
-        = link_to entry.title, entry
+section.readme
+  h2 What's this?
+  p
+    | Compare implementation of many algorithms in different languages.
+  p
+    | You can post your code by using gist (
+    = link_to "?", "https://gist.github.com"
+    | ).
+
+section.entries_section
+  h2 Recent Entries
+
+  ul.entries
+    - @entries.each do |entry|
+      li.entry
+        = link_to entry do
+          .title
+            i.icon-eye-open
+            = entry.title
+
+          .date
+            i.icon-time
+            = entry.modified_on

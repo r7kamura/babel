@@ -1,0 +1,63 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+i {
+  margin-right: 0.2em;
+}
+
+body {
+  width: 920px;
+  padding: 0 20px;
+  margin: 0 auto;
+  font-family: sans-serif, serif;
+}
+
+#header {
+  $height: 120px;
+  overflow: hidden;
+  height: $height;
+
+  h1 {
+    float: left;
+    margin: 0;
+    font-size: $height * 0.5;
+    line-height: $height;
+    font-family: "Press Start 2P", sans-serif;
+  }
+
+  .add {
+    float: right;
+    font-size: $height * 0.5;
+    line-height: $height;
+    font-weight: bold;
+  }
+}
+
+#footer {
+  margin-top: 100px;
+  text-align: center;
+
+  a {
+    display: block;
+
+    p {
+      margin: 0;
+
+      &.yunotti {
+        font-size: 30px;
+        line-height: 1;
+      }
+
+      &.name {
+        font-size: 10px;
+        line-height: 1;
+      }
+    }
+  }
+}

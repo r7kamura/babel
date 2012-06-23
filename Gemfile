@@ -7,6 +7,7 @@ gem "jquery-rails"
 
 # custom
 gem "slim"
+gem "font-awesome-rails"
 
 group :assets do
   gem "sass-rails",   "~> 3.2.3"

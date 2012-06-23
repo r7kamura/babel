@@ -1,0 +1,55 @@
+#entries_index {
+  .entries_section {
+    margin-top: 20px;
+  }
+
+  .entries {
+    padding: 0;
+
+    .entry {
+      margin-bottom: 10px;
+
+      a {
+        display: block;
+        overflow: hidden;
+        padding: 5px 10px;
+        background-color: #eee;
+        text-shadow: 0 1px 0 white;
+        border-radius: 4px;
+
+        &:hover {
+          color: white;
+          background-color: black;
+          text-shadow: 0 1px 0 #666;
+        }
+
+        .title {
+          float: left;
+        }
+
+        .date {
+          float: right;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+#entries_show {
+  form {
+    input[type=text] {
+      width: 30%;
+    }
+  }
+
+  .title {
+    font-weight: normal;
+  }
+
+  .codes {
+    .code {
+      margin-top: 10px;
+    }
+  }
+}

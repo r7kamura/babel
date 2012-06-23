@@ -1,10 +1,16 @@
-h3
+h3.title
   = @entry.title
 
 ul.codes
   - @entry.codes.each do |code|
     li.code
-      = gist_embed_tag(code)
+      .tag
+        span.label
+          = code.language
+
+      .embed
+        = gist_embed_tag(code)
+
 
 = form_tag [@entry, :codes] do
   = hidden_field_tag "code[entry_id]", @entry.id
@@ -16,4 +22,6 @@ ul.codes
     = text_field_tag "code[url]", "", :placeholder => "https://gist.github.com/12345678"
 
   .submit
-    = submit_tag "OK"
+    = button_tag :class => "btn" do
+      i.icon-plus-sign
+      | Add a new code
