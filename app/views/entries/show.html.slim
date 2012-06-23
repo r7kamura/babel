@@ -1,28 +1,30 @@
-h3.title
-  i.icon-chevron-right
-  = @entry.title
+section
+  h3.title
+    i.icon-chevron-right
+    = @entry.title
 
-ul.codes
-  - @entry.codes.each do |code|
-    li.code
-      .tag
-        span.label
-          = code.language
+section
+  ul.codes
+    - @entry.codes.each do |code|
+      li.code
+        .tag
+          span.label*{:class => label_class_name(code.language)}
+            = code.language
 
-      .embed
-        = gist_embed_tag(code)
+        .embed
+          = gist_embed_tag(code)
 
+section
+  = form_tag [@entry, :codes] do
+    = hidden_field_tag "code[entry_id]", @entry.id
 
-= form_tag [@entry, :codes] do
-  = hidden_field_tag "code[entry_id]", @entry.id
+    .language
+      = text_field_tag "code[language_dirty]", "", :placeholder => "Perl or Ruby or etc..."
 
-  .language
-    = text_field_tag "code[language_dirty]", "", :placeholder => "Perl or Ruby or etc..."
+    .url
+      = text_field_tag "code[url]", "", :placeholder => "https://gist.github.com/12345678"
 
-  .url
-    = text_field_tag "code[url]", "", :placeholder => "https://gist.github.com/12345678"
-
-  .submit
-    = button_tag :class => "btn" do
-      i.icon-plus-sign
-      | Add a new code
+    .submit
+      = button_tag :class => "btn" do
+        i.icon-plus-sign
+        | Add a new code
