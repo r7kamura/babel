@@ -10,7 +10,7 @@ ul.codes
   = hidden_field_tag "code[entry_id]", @entry.id
 
   .language
-    = text_field_tag "code[language]", "", :placeholder => "Perl or Ruby or etc..."
+    = text_field_tag "code[language_dirty]", "", :placeholder => "Perl or Ruby or etc..."
 
   .url
     = text_field_tag "code[url]", "", :placeholder => "https://gist.github.com/12345678"
