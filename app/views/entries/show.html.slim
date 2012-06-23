@@ -1,0 +1,19 @@
+h3
+  = @entry.title
+
+ul.codes
+  - @entry.codes.each do |code|
+    li.code
+      = gist_embed_tag(code)
+
+= form_tag codes_path do
+  = hidden_field_tag :entry_id, @entry.id
+
+  .language
+    = text_field_tag "code[language]", "", :placeholder => "Perl or Ruby or etc..."
+
+  .url
+    = text_field_tag "code[url]", "", :placeholder => "#{Code::GIST_BASE_URL}1234567"
+
+  .submit
+    = submit_tag "OK"

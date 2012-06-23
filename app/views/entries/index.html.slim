@@ -1,0 +1,5 @@
+ul.entries
+  - @entries.each do |entry|
+    li.entry
+      .title
+        = link_to entry.title, entry
