@@ -6,14 +6,14 @@ ul.codes
     li.code
       = gist_embed_tag(code)
 
-= form_tag codes_path do
-  = hidden_field_tag :entry_id, @entry.id
+= form_tag [@entry, :codes] do
+  = hidden_field_tag "code[entry_id]", @entry.id
 
   .language
     = text_field_tag "code[language]", "", :placeholder => "Perl or Ruby or etc..."
 
   .url
-    = text_field_tag "code[url]", "", :placeholder => "#{Code::GIST_BASE_URL}1234567"
+    = text_field_tag "code[url]", "", :placeholder => "https://gist.github.com/12345678"
 
   .submit
     = submit_tag "OK"

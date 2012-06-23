@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20120623044309) do
 
   create_table "codes", :force => true do |t|
     t.string   "language"
-    t.string   "gist_id"
+    t.string   "url"
     t.integer  "entry_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

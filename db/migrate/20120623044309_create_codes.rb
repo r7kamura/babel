@@ -2,7 +2,7 @@ class CreateCodes < ActiveRecord::Migration
   def change
     create_table :codes do |t|
       t.string :language
-      t.string :gist_id
+      t.string :url
       t.integer :entry_id
 
       t.timestamps
