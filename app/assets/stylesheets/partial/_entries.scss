@@ -1,8 +1,38 @@
 #entries_index {
-  .entries_section {
+  .entries_section,
+  .search_section {
     margin-top: 20px;
   }
+}
 
+#entries_show {
+  .title {
+    font-size: 30px;
+  }
+
+  .codes {
+    margin-top: 20px;
+
+    .code {
+      margin-top: 10px;
+    }
+  }
+
+  form {
+    input[type=text] {
+      width: 30%;
+    }
+  }
+}
+
+#entries_new {
+  input[type=text] {
+    width: 50%;
+  }
+}
+
+#entries_index,
+#entries_search {
   .entries {
     padding: 0;
 
@@ -32,24 +62,6 @@
           font-size: 10px;
         }
       }
-    }
-  }
-}
-
-#entries_show {
-  form {
-    input[type=text] {
-      width: 30%;
-    }
-  }
-
-  .title {
-    font-weight: normal;
-  }
-
-  .codes {
-    .code {
-      margin-top: 10px;
     }
   }
 }

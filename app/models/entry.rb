@@ -5,6 +5,10 @@ class Entry < ActiveRecord::Base
 
   validates :title, :presence => true
 
+  scope :search, lambda { |query|
+    where("title like ?", "%#{query}%")
+  }
+
   def modified_on
     if code = codes.first
       code.created_at.to_date

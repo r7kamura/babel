@@ -1,6 +1,10 @@
+h2 Create a new entry
+
 = form_for @entry do |f|
   .title
     = f.text_field :title, :placeholder => "title"
 
   .submit
-    = f.submit
+    = button_tag :class => "btn" do
+      i.icon-file
+      | Create

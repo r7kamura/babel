@@ -5,6 +5,10 @@ class EntriesController < ApplicationController
     @entries = Entry.order("created_at DESC").includes(:codes)
   end
 
+  def search
+    @entries = Entry.search(params[:query])
+  end
+
   def show
   end
 

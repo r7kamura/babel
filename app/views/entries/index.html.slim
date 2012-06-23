@@ -10,14 +10,9 @@ section.readme
 section.entries_section
   h2 Recent Entries
 
-  ul.entries
-    - @entries.each do |entry|
-      li.entry
-        = link_to entry do
-          .title
-            i.icon-eye-open
-            = entry.title
+  = render "entries", :entries => @entries
 
-          .date
-            i.icon-time
-            = entry.modified_on
+section.search_section
+  h2 Search
+
+  = render "search_form"

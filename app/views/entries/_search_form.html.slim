@@ -1,0 +1,5 @@
+= form_tag search_entries_path, :method => "GET", :class => "form-search" do
+  = text_field_tag :query, params[:query]
+
+  = button_tag :class => "btn" do
+    i.icon-search
