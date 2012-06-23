@@ -7,8 +7,6 @@ http://babylon.herokuapp.com/
 Compare implementation of many algorithms in different programming languages.
 You can post your code by using [gist](https://gist.github.com).
 
-![babel](http://dl.dropbox.com/u/5978869/image/20120623_180150.png)
-
 ## Require
 
 * Ruby >= 1.9.2
