@@ -18,3 +18,10 @@ end
 group :development do
   gem "pry"
 end
+
+group :production do
+  # for Heroku
+  gem "pg"
+  gem "thin"
+  gem "therubyracer"
+end
